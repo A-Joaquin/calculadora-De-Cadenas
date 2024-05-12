@@ -1,21 +1,17 @@
-function calculadoraCadena(cadena) {
-    let sumaDeNumeros=0;
-
-    if(cadena=="")
-    {
-        sumaDeNumeros=0;
+function calculadoraDeCadena(cadena) {
+    if (cadena === "") {
+        return 0;
     }
-    else
-    {
-        let numeros=cadena.split(',');
-        for (let i = 0; i < numeros.length; i++) {
-            sumaDeNumeros = sumaDeNumeros + parseInt(numeros[i]);
-            console.log(numeros[i])
-        }
+
+    const numeros = cadena.split(',');
+    let sumaDeNumeros = 0;
+
+    for (const numeroStr of numeros) {
+        const numero = parseInt(numeroStr);
+        sumaDeNumeros += numero;
     }
 
     return sumaDeNumeros;
-  }
-  
-  export default calculadoraCadena;
-  
+}
+
+export default calculadoraDeCadena;
