@@ -13,4 +13,7 @@ describe("Calcular numeros de una cadena", () => {
   it("deberia de devolver 55 para cadena con variso numeros", () => {
     expect(calculadoraDeCadena("1,2,3,4,5,6,7,8,9,10")).toEqual(55);
   });
+  it("deberia de devolver 6 para cadena con separada con , y -", () => {
+    expect(calculadoraDeCadena("1,2-3")).toEqual(6);
+  });
 });

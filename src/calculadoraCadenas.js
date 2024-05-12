@@ -1,17 +1,18 @@
 function calculadoraDeCadena(cadena) {
-    if (cadena === "") {
+    if (cadena === "") 
+    {
         return 0;
     }
 
-    const numeros = cadena.split(',');
-    let sumaDeNumeros = 0;
-
-    for (const numeroStr of numeros) {
-        const numero = parseInt(numeroStr);
-        sumaDeNumeros += numero;
-    }
-
-    return sumaDeNumeros;
+    return cadena.split(',').reduce((suma, segmento) => {
+        if (segmento.includes('-')) {
+            const [inicio, fin] = segmento.split('-').map(Number);
+            for (let i = inicio; i <= fin; i++) suma += i;
+        } else {
+            suma += Number(segmento);
+        }
+        return suma;
+    }, 0);
 }
 
 export default calculadoraDeCadena;
