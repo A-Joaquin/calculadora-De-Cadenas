@@ -1,5 +1,10 @@
-function calculadoraCadena(a) {
-    return 0;
+function calculadoraCadena(cadena) {
+    let sumaDeNumeros;
+    if(cadena=="")
+    {
+        sumaDeNumeros=0;
+    }
+    return sumaDeNumeros;
   }
   
   export default calculadoraCadena;
