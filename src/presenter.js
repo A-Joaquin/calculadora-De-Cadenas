@@ -1,15 +1,15 @@
-import sumar from "./sumador";
+import calculadoraDeCadena from "./calculadoraCadenas.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const cadena = document.querySelector("#cadena");
+const form = document.querySelector("#calcular-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  // No necesitas convertir la cadena a un entero, ya que es una cadena
+  const cadenaNumeros = cadena.value;
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  // Cambia String.parseInt por parseInt
+  div.innerHTML = "<p> suma de numeros: " + calculadoraDeCadena(cadenaNumeros) + "</p>";
 });
