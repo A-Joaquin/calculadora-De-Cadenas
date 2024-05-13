@@ -29,4 +29,9 @@ describe("Calcular numeros de una cadena", () => {
   it("deberia de devolver 1 para cadena con numeros >= 1000", () => {
     expect(calculadoraDeCadena("//[;] 1,1002;1001-1000")).toEqual(1);
   });
+
+  it("deberia de devolver 1 para cadena con numeros >= 1000 y con delimitador personalizado con cualquier longitud", () => {
+    expect(calculadoraDeCadena("//[***] 1***1002***1001***1000")).toEqual(1);
+  });
+
 });
