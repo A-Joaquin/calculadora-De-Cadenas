@@ -34,4 +34,10 @@ describe("Calcular numeros de una cadena", () => {
     expect(calculadoraDeCadena("//[***] 1***1002***1001***1000")).toEqual(1);
   });
 
+  it("deberia de devolver 19 y con delimitador personalizado con cualquier longitud Y delimitadores combinados", () => {
+    expect(calculadoraDeCadena("//[***] 5-2,10***2")).toEqual(19);
+  });
+  it("deberia de devolver 25 y con delimitador personalizado con cualquier longitud Y delimitadores combinados", () => {
+    expect(calculadoraDeCadena("//[***] 1***,2,3***5-2,10***2")).toEqual(25);
+  });
 });
