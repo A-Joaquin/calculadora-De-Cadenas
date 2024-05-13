@@ -25,4 +25,8 @@ describe("Calcular numeros de una cadena", () => {
   it("deberia de devolver 4 para cadena con delimitador especificado y delimitadores por defecto - y ,", () => {
     expect(calculadoraDeCadena("//[;] 1,1;1-1")).toEqual(4);
   });
+
+  it("deberia de devolver 1 para cadena con numeros >= 1000", () => {
+    expect(calculadoraDeCadena("//[;] 1,1002;1001-1000")).toEqual(1);
+  });
 });
