@@ -6,9 +6,14 @@ function calculadoraDeCadena(cadena) {
 
     return cadena.split(',').reduce((suma, segmento) => {
         if (segmento.includes('-')) {
-            const [inicio, fin] = segmento.split('-').map(Number);
-            for (let i = inicio; i <= fin; i++) suma += i;
-        } else {
+            console.log(segmento);
+            let numeros2 = segmento.split('-');
+            for (const numeroStr of numeros2) {
+                const numero = parseInt(numeroStr);
+                suma += numero;
+            }
+
+        }else {
             suma += Number(segmento);
         }
         return suma;
