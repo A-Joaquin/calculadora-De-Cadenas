@@ -19,6 +19,13 @@ function calculadoraDeCadena(cadena) {
                 const numero = parseInt(numeroStr);
                 suma += numero;
             }
+
+        }else if(segmento.includes(',')) {
+            let numeros2 = segmento.split(',');
+            for (const numeroStr of numeros2) {
+                const numero = parseInt(numeroStr);
+                suma += numero;
+            }
         }
         else {
             suma += Number(segmento);
