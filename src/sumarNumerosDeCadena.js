@@ -2,12 +2,12 @@ function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-function sumarNumerosDe(cadena) {
-    let cadenaFinal = cadena;
+function buscarDelimitador(cadena) {
     let delimitadorPersonalizado = ',';
-    
+    let cadenaFinal = cadena;
+
     if (cadena === "") {
-        return 0;
+        return { delimitador: delimitadorPersonalizado, cadenaFinal: "" };
     }
 
     if (cadena.startsWith("//")) {
@@ -18,16 +18,19 @@ function sumarNumerosDe(cadena) {
             if (cadena[i] === ']') {
                 i = cadena.length;
             } else {
-                delimitadorPersonalizado = delimitadorPersonalizado + cadena[i];
+                delimitadorPersonalizado += cadena[i];
                 i++;
             }
         }
-        let cadenaNumero = (cadena.split(" "))[1];
-        cadenaFinal = cadenaNumero;
+
+        cadenaFinal = cadena.split(" ")[1];
     }
 
-    const escapedDelimitador = escapeRegExp(delimitadorPersonalizado);
+    let escapedDelimitador = escapeRegExp(delimitadorPersonalizado);
+    return { delimitador: escapedDelimitador, cadenaFinal: cadenaFinal };
+}
 
+function sumar(escapedDelimitador, cadenaFinal) {
     cadenaFinal = cadenaFinal.replace(new RegExp(escapedDelimitador, 'g'), ',');
 
     return cadenaFinal.split(',').reduce((suma, segmento) => {
@@ -39,6 +42,12 @@ function sumarNumerosDe(cadena) {
         }
         return suma;
     }, 0);
+}
+
+function sumarNumerosDe(cadena) {
+    const { delimitador, cadenaFinal } = buscarDelimitador(cadena);
+    let suma = sumar(delimitador, cadenaFinal);
+    return suma;
 }
 
 function verificarNumeroMenorA1000(numero) {
