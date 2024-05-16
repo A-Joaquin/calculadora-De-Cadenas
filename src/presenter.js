@@ -1,4 +1,4 @@
-import calculadoraDeCadena from "./calculadoraCadenas.js";
+import sumarNumerosDe from "./sumarNumerosDeCadena.js";
 
 const cadena = document.querySelector("#cadena");
 const form = document.querySelector("#calcular-form");
@@ -11,5 +11,5 @@ form.addEventListener("submit", (event) => {
   const cadenaNumeros = cadena.value;
 
   // Cambia String.parseInt por parseInt
-  div.innerHTML = "<p> suma de numeros: " + calculadoraDeCadena(cadenaNumeros) + "</p>";
+  div.innerHTML = "<p> suma de numeros: " + sumarNumerosDe(cadenaNumeros) + "</p>";
 });
