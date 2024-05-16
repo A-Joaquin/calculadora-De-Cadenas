@@ -2,7 +2,7 @@ function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-function calculadoraDeCadena(cadena) {
+function sumarNumerosDe(cadena) {
     let cadenaFinal = cadena;
     let delimitadorPersonalizado = ',';
     
@@ -45,4 +45,4 @@ function verificarNumeroMenorA1000(numero) {
     return numero < 1000;
 }
 
-export default calculadoraDeCadena;
+export default sumarNumerosDe;
