@@ -2,3 +2,5 @@
 - Cambiar nombre de los archivos de calculadoraCadenas.js a sumarNumerosDeCadena.js
 - simplificar funcion principal de sumarNumeroDe(cadena), una funcion debe hacer solo una cosa.
 - cambiar a nombres descriptivos en las funciones creadas.
+- modificar presenter.js para llamar correctamente a la funcion.
+- ordenar funciones por nivel de abstraccion de archivo js.

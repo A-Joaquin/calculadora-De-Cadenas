@@ -1,6 +1,10 @@
-function escapeRegExp(string) {
-    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function sumarNumerosDe(cadena) {
+    const { delimitador, cadenaFinal } = buscarDelimitadorDe(cadena);
+    let suma = sumarPorDelimitador(delimitador, cadenaFinal);
+    return suma;
 }
+
+
 
 function buscarDelimitadorDe(cadena) {
     let delimitadorPersonalizado = ',';
@@ -44,10 +48,9 @@ function sumarPorDelimitador(escapedDelimitador, cadenaFinal) {
     }, 0);
 }
 
-function sumarNumerosDe(cadena) {
-    const { delimitador, cadenaFinal } = buscarDelimitadorDe(cadena);
-    let suma = sumarPorDelimitador(delimitador, cadenaFinal);
-    return suma;
+
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function verificarNumeroMenorA1000(numero) {
