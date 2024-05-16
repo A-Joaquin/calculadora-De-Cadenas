@@ -4,3 +4,4 @@
 - cambiar a nombres descriptivos en las funciones creadas.
 - modificar presenter.js para llamar correctamente a la funcion.
 - ordenar funciones por nivel de abstraccion de archivo js.
+- modificar presenter.js para refactorizacion de nombres de variables.
