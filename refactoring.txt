@@ -1,0 +1,4 @@
+- Cambiar nombre de la funcion de calculadoraDeCadena(cadena) a sumarNumeroDe(cadena).
+- Cambiar nombre de los archivos de calculadoraCadenas.js a sumarNumerosDeCadena.js
+- simplificar funcion principal de sumarNumeroDe(cadena), una funcion debe hacer solo una cosa.
+- cambiar a nombres descriptivos en las funciones creadas.

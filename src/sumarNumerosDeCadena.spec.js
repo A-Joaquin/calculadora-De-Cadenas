@@ -1,4 +1,4 @@
-import sumarNumerosDe from "./calculadoraCadenas.js";
+import sumarNumerosDe from "./- Cambiar nombre de los archivos de calculadoraCadenas.js a sumarNumerosDeCadena.js.js";
 
 describe("Calcular numeros de una cadena", () => {
   it("deberia de devolver 0 para cadena vacia", () => {
