@@ -2,7 +2,7 @@ function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-function buscarDelimitador(cadena) {
+function buscarDelimitadorDe(cadena) {
     let delimitadorPersonalizado = ',';
     let cadenaFinal = cadena;
 
@@ -30,7 +30,7 @@ function buscarDelimitador(cadena) {
     return { delimitador: escapedDelimitador, cadenaFinal: cadenaFinal };
 }
 
-function sumar(escapedDelimitador, cadenaFinal) {
+function sumarPorDelimitador(escapedDelimitador, cadenaFinal) {
     cadenaFinal = cadenaFinal.replace(new RegExp(escapedDelimitador, 'g'), ',');
 
     return cadenaFinal.split(',').reduce((suma, segmento) => {
@@ -45,8 +45,8 @@ function sumar(escapedDelimitador, cadenaFinal) {
 }
 
 function sumarNumerosDe(cadena) {
-    const { delimitador, cadenaFinal } = buscarDelimitador(cadena);
-    let suma = sumar(delimitador, cadenaFinal);
+    const { delimitador, cadenaFinal } = buscarDelimitadorDe(cadena);
+    let suma = sumarPorDelimitador(delimitador, cadenaFinal);
     return suma;
 }
 
